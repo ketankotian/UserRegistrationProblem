@@ -24,5 +24,10 @@ public class UserRegistration {
         return Pattern.matches("^[1-9]{2,3}(\\s)?[6-9]{1}[0-9]{9}$", mobile);
     }
 
+    // password validation
+    public static boolean pass(String pass) {
+        return Pattern.matches("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()]).{8,}$", pass);
+    }
+
 
 }

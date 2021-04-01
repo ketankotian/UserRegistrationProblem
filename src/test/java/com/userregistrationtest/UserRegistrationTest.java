@@ -37,4 +37,12 @@ public class UserRegistrationTest {
         Assertions.assertTrue(result);
     }
 
+    @Test
+    public void givenPassword_WhenProper_ShouldReturnTrue() {
+        UserRegistration fn = new UserRegistration();
+        boolean result = UserRegistration.pass("@123Ketank");
+        Assertions.assertEquals(true, result);
+        Assertions.assertTrue(result);
+    }
+
 }
