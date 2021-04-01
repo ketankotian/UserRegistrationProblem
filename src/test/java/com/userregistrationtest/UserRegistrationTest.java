@@ -21,4 +21,12 @@ public class UserRegistrationTest {
         Assertions.assertTrue(result);
     }
 
+    @Test
+    public void givenEmail_WhenProper_ShouldReturnTrue() {
+        UserRegistration fn = new UserRegistration();
+        boolean result = UserRegistration.email("abc.de@aol.com");
+        Assertions.assertEquals(true, result);
+        Assertions.assertTrue(result);
+    }
+
 }
