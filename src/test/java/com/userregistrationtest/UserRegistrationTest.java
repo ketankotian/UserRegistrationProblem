@@ -8,7 +8,7 @@ public class UserRegistrationTest {
     @Test
     public void givenFirstName_WhenProper_ShouldReturnTrue() {
         UserRegistration fn = new UserRegistration();
-        boolean result = UserRegistration.validateFirstName("Ketan");
+        boolean result = UserRegistration.firstName("Ketan");
         Assertions.assertEquals(true, result);
         Assertions.assertTrue(result);
     }
