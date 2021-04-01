@@ -29,4 +29,12 @@ public class UserRegistrationTest {
         Assertions.assertTrue(result);
     }
 
+    @Test
+    public void givenMobileNumber_WhenProper_ShouldReturnTrue() {
+        UserRegistration fn = new UserRegistration();
+        boolean result = UserRegistration.mobile("91 8655807478");
+        Assertions.assertEquals(true, result);
+        Assertions.assertTrue(result);
+    }
+
 }

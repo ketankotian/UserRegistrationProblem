@@ -14,9 +14,15 @@ public class UserRegistration {
         return Pattern.matches("^[A-Z]{1}[a-z]{2,}", lastName);
     }
 
-    // email vaildation
+    // email validation
     public static boolean email(String email) {
         return Pattern.matches("^[a-zA-Z0-9]+[._+-]?[a-zA-Z0-9]*@[a-zA-Z0-9]+([.][a-zA-Z]{2,4})([.][a-zA-Z]{2,4})?$", email);
     }
+
+    // mobile number validation
+    public static boolean mobile(String mobile) {
+        return Pattern.matches("^[1-9]{2,3}(\\s)?[6-9]{1}[0-9]{9}$", mobile);
+    }
+
 
 }
