@@ -2,5 +2,7 @@
 /gradle
 .gradle
 .idea
-
-
+build.gradle
+gradlew
+settings.gradle
+README.d
