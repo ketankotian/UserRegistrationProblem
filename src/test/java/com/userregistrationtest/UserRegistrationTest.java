@@ -1,6 +1,7 @@
 package com.userregistrationtest;
 
 import com.userregistration.UserRegistration;
+import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -43,6 +44,41 @@ public class UserRegistrationTest {
         boolean result = UserRegistration.pass("@123Ketank");
         Assertions.assertEquals(true, result);
         Assertions.assertTrue(result);
+    }
+
+    @Test
+    public void givenFirstName_WhenEmpty_ShouldReturnFalse() {
+        UserRegistration fn = new UserRegistration();
+        boolean result = UserRegistration.firstName("");
+        Assertions.assertEquals(false, result);
+    }
+
+    @Test
+    public void givenLastName_WhenEmpty_ShouldReturnFalse() {
+        UserRegistration fn = new UserRegistration();
+        boolean result = UserRegistration.lastName("");
+        Assertions.assertEquals(false, result);
+    }
+
+    @Test
+    public void givenMobileNumber_WhenEmpty_ShouldReturnFalse() {
+        UserRegistration fn = new UserRegistration();
+        boolean result = UserRegistration.mobile("");
+        Assertions.assertEquals(false, result);
+    }
+
+    @Test
+    public void givenEmail_WhenEmpty_ShouldReturnFalse() {
+        UserRegistration fn = new UserRegistration();
+        boolean result = UserRegistration.email("");
+        Assertions.assertEquals(false, result);
+    }
+
+    @Test
+    public void givenPassword_WhenEmpty_ShouldReturnFalse() {
+        UserRegistration fn = new UserRegistration();
+        boolean result = UserRegistration.pass("");
+        Assertions.assertEquals(false, result);
     }
 
 }
